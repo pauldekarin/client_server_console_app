@@ -1,30 +1,45 @@
-<h1>Привет!</h1>
+# Client-Server Application
 
-Станция:<br>
-  MacBook Air M1 2020<br>
-  macOs Ventura 13.0<br>
-<br>
-Разработка:<br>
-C++17<br>
-Visual Code<br>
-Docker Ubuntu(последняя версия)<br>
+## Overview
 
-<h2>Build Project</h2>
-make build <br>
-<br>
-Выход:<br>
-Серверное приложение - server.out<br>
-Клиентское приложение - client.out<br>
+This project involves implementing a client-server application using sockets in C++. Below is a detailed description of the development environment, build process, and usage of the application.
 
-<h2>Usage</h2>
->> parse() - Парсинг сообщения от клиента и возврат сообщения, содержащего табличку с количеством различных букв<br>
->> count() - Возврат количества текущих подключений по запросу клиента<br>
->>  chat() - Начать общение с клиентом через сервер<br>
->>  back() - Выйти из активного чата<br>
->>    id() - Отобразить свой идентификатор определенный на сервере<br>
->>  help() - Список команд<br>
->> exit() - Закрыть приложение<br>
+## Development Environment
 
-<h2>Недочеты</h2>
-Пропускная способность между сокетами 4096 байт, если отправлять больше, то сервер иклиент примут данные, но некорректно отработают, а
-так как уже дедлайны подходят, я не успеваю это исправить(((
+- **System**: MacBook Air M1 2020
+- **Operating System**: macOS Ventura 13.0
+
+### Development Tools
+
+- **Language**: C++17
+- **IDE**: Visual Studio Code
+- **Containerization**: Docker Ubuntu (latest version)
+
+## Build Project
+
+To build the project, navigate to the project directory and run:
+
+```sh
+make build
+```
+
+## Output
+`Server Application`: server.out
+
+`Client Application`: client.out
+
+## Usage
+### Commands
+`parse()`: Parses the message from the client and returns a response containing a table with the count of different characters.
+
+`count()`: Returns the number of current connections upon client request.
+
+`chat()`: Initiates communication with the client through the server.
+
+`back()`: Exits the active chat.
+
+`id()`: Displays the client's identifier as determined by the server.
+
+`help()`: Lists all available commands.
+
+`exit()`: Closes the application.
